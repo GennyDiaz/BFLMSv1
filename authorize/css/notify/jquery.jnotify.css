@@ -1,0 +1,86 @@
+div.jnotify-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100000;
+}
+
+div.jnotify-container div.jnotify-notification {
+	position: relative;
+}
+
+div.jnotify-container div.jnotify-dismissible {
+	cursor: pointer;
+}
+
+div.jnotify-container div.jnotify-notification div.jnotify-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #6ec100;
+	/* filter: alpha(opacity=95%);
+	-moz-opacity: (95%);
+	opacity: 95%; */
+	z-index: 1;
+}
+
+div.jnotify-container div.jnotify-notification a.jnotify-close,
+div.jnotify-container div.jnotify-notification a.jnotify-close:link,
+div.jnotify-container div.jnotify-notification a.jnotify-close:visited,
+div.jnotify-container div.jnotify-notification a.jnotify-close:focus,
+div.jnotify-container div.jnotify-notification a.jnotify-close:hover {
+	position: absolute;
+	top: 0.75em; /* needs to align with message block */
+	right: 1em;
+	padding: 0;
+	/* font: 700 18px Verdana,Arial,Helvetica,sans-serif; */
+	line-height: 1.675em;
+	color: #fff;
+	text-decoration: none;
+	z-index: 3;
+	cursor: pointer;
+}
+
+div.jnotify-container div.jnotify-notification div.jnotify-message {
+	position: relative;
+	z-index: 2;
+	padding: 0.75em 3em;
+	text-align: center;
+	color: #fff;
+	/* font: 700 18px Verdana,Arial,Helvetica,sans-serif; */
+	line-height: 1.675em;
+}
+
+/* make the inner message centered, but left-align text when it wraps */
+div.jnotify-container div.jnotify-notification div.jnotify-message > div {
+	display: inline-block;
+	text-align: left;
+}
+
+div.jnotify-container div.jnotify-notification div.jnotify-message * {
+	font: inherit;
+	font-size: 1em;
+}
+
+/* notification type == "error" */
+div.jnotify-container div.jnotify-notification-error div.jnotify-background {
+	background-color: #b20018;
+}
+
+div.jnotify-container div.jnotify-notification-error a.jnotify-close,
+div.jnotify-container div.jnotify-notification-error div.jnotify-message {
+	color: #fff !important;
+}
+
+/* notification type == "warning" */
+div.jnotify-container div.jnotify-notification-warning div.jnotify-background {
+	background-color: #FFDB58;
+}
+
+div.jnotify-container div.jnotify-notification-warning a.jnotify-close,
+div.jnotify-container div.jnotify-notification-warning div.jnotify-message {
+	color: #333 !important;
+}

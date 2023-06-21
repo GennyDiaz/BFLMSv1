@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.background{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: url("image/60301793_2142609682442421_3730311342914011136_n.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    opacity: 70%;
+}
+.login{
+    z-index: 2;
+    width: 360px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffff;
+}
+.login h1{
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+.login form{
+    font-size: 20px;
+}
+.login form .form-group{
+    margin-bottom: 12px;
+}
+.login form input[type="submit"]{
+    font-size: 20px;
+    margin-top: 15px;
+}
+.login form .btn-back{
+    float: right;
+    background: tomato;
+    border: red;
+    color: #ffff;
+}

@@ -1,0 +1,46 @@
+@font-face {
+    font-family: poppins;
+    src: url("Poppins-Regular.ttf");
+}
+*{
+    font-family: 'poppins';
+    margin: 0;
+    padding: 0;
+}
+h1 a{
+    color: #000;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    color:#ffc107;
+}
+header .cover-image{
+    background: url("image/60301793_2142609682442421_3730311342914011136_n.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.logo-wrapper{
+    text-transform: uppercase;
+    padding: 30px 0px;
+}
+.menu{
+    background: #080826;
+}
+.menu-items .active{
+    background: #212144;
+}
+.menu .menu-items a{
+    text-decoration: none;
+    padding: 10px 30px;
+    display: block;
+}
+.menu .menu-items{
+    display: flex;
+    justify-content: space-between;
+}
+section{
+    margin-top: 30px;
+}

@@ -1,0 +1,142 @@
+@font-face {
+    font-family: poppins;
+    src: url("Poppins-Regular.ttf?family=Inter:wght@400;500;600;700;800;900&display=swap");
+}
+*{
+    font-family: 'poppins';
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #080826;
+}
+.bg-custom{
+    background-color: #212144;
+}
+.navbar .container-fluid .navbar-brand{
+    color: #FFD700;
+}
+.rate{
+  margin: 0 auto;
+}
+.pg-hd-color{
+  color: #FFD700;
+}
+.center-1{
+  align-items: center;
+}
+.w-custom{
+  width: 75%;
+}
+/* barangay map */
+.world-map, .pin, span, img{
+  box-sizing: border-box;
+}
+.world-map{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1em;
+  position: relative;
+}
+.world-map img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.pin{
+  background: tomato;
+  position: absolute;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+}
+.pin::before{
+  content: '';
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: 
+  pulse 1.3s ease-in-out infinite;
+}
+.pin span{
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  left: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 3em;
+  padding: 0.3em 0.6em;
+  font-size: 0.9em;
+  color: black;
+}
+/* .main{
+  top: 19%;
+  left: 35%;
+} */
+@keyframes pulse {
+  100%{
+      opacity: 0;
+      transform: 
+      translate(-50%, -50%)
+      scale(2.5);
+  }
+}
+@media screen and (max-width: 600px){
+  .world-map{
+      font-size: 13px;
+  }
+}
+/* barangay map */
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (max-width: 767.5px){
+  .w-custom{
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+.text-fm{
+  font-size: 12px;
+  height: 150px;
+}
